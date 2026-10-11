@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10141c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="换装助手">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>复活甲换装助手</title>
+</head>
+<body>
+<header>
+  <div class="eyebrow">王者荣耀 · 本地辅助工具</div>
+  <h1>复活甲换装助手</h1>
+  <p class="sub">大按钮 · 换装步骤 · 倒计时提醒</p>
+</header>
+<main>
+  <section class="card hero">
+    <div class="status"><span class="dot"></span> 独立辅助工具，不连接游戏</div>
+    <h2 id="stepTitle">准备换装</h2>
+    <p id="stepText">先在游戏内打开装备商店。准备好后，按下面按钮逐步查看操作。</p>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="actions">
+      <button id="nextBtn" class="primary">开始 / 下一步</button>
+      <button id="resetBtn" class="secondary">重置流程</button>
+    </div>
+    <p class="note">提示：本工具不会自动点击游戏，也不会读取游戏画面或内存。</p>
+  </section>
+  <section class="card">
+    <h2>换装流程</h2>
+    <ol id="stepList" class="step-list"></ol>
+  </section>
+  <section class="card">
+    <h2>复活甲状态提醒</h2>
+    <p class="muted">手动记录状态，避免忘记后续换装。此记录仅保存在当前页面运行期间。</p>
+    <div class="status-buttons">
+      <button data-state="未购买" class="chip selected">未购买</button>
+      <button data-state="已购买" class="chip">已购买</button>
+      <button data-state="已使用/需换装" class="chip">已使用 / 需换装</button>
+    </div>
+    <p id="gearStatus" class="gear-status">当前记录：未购买</p>
+  </section>
+  <section class="card">
+    <h2>快捷倒计时</h2>
+    <p class="muted">用于提醒自己留意装备冷却或复盘时间；不是游戏内冷却识别。</p>
+    <div class="timer-row">
+      <button class="secondary" data-seconds="5">5 秒</button>
+      <button class="secondary" data-seconds="10">10 秒</button>
+      <button class="secondary" data-seconds="20">20 秒</button>
+    </div>
+    <div id="timerDisplay" class="timer">未启动</div>
+    <button id="stopTimer" class="secondary full">停止倒计时</button>
+  </section>
+  <section class="card warning">
+    <h2>能力边界</h2>
+    <ul>
+      <li>iOS 不允许普通 App 任意点击或控制另一个 App 的界面。</li>
+      <li>本工具不自动打开商店、不出售装备、不购买复活甲。</li>
+      <li>不要依赖它判断游戏实时状态；所有状态都需要你手动确认。</li>
+    </ul>
+  </section>
+</main>
+<footer>离线可用 · 不需要账号 · 不收集数据</footer>
+<script src="app.js"></script>
+</body>
+</html>

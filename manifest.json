@@ -1,0 +1,9 @@
+{
+  "name": "复活甲换装助手",
+  "short_name": "换装助手",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c1017",
+  "theme_color": "#10141c",
+  "lang": "zh-CN"
+}
